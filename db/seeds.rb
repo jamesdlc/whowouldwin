@@ -9,5 +9,13 @@ USERS = [
   } #pw switt
 ]
 
+DISCUSSIONS = [
+{
+  user_id: 1,
+  title: "Test",
+  content: "Hello World"
+}
+]
 
 User.create(USERS)
+Discussion.create(DISCUSSIONS)

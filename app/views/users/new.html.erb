@@ -1,3 +1,4 @@
+
 <div class="sign-up-form">
 
   <h1>Sign Up</h1>
@@ -9,7 +10,10 @@
       <%= f.text_field :image_url, :placeholder => "Profile Picture (add direct link or leave blank)" %><br>
       <%= f.password_field :password, :placeholder => "Password" %><br>
       <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %><br>
-      <%= f.submit "Submit", :class=>'' %>
+      <%= f.submit "Submit", :class=>"btn btn-primary" %>
+    <% end %>
+    <%= link_to root_path, method: :get, :class => "btn btn-primary" do %>
+    Home
     <% end %>
 
 </div>
