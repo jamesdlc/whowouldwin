@@ -1,0 +1,18 @@
+
+<h2 class="header">Welcome, <%= @user.user_name %>!</h2>
+
+<img src="<%=@user.image_url%>" style="height: 190px; width: 200px;"><br>
+
+Name: <%= @user.first_name %> <%= @user.last_name %> <br>
+E-mail Address: <%= @user.email %> <br>
+Member Since: <%= @user.created_at %> <br>
+
+<span>
+<%= link_to edit_user_path(@user), method: :get, :class => "btn btn-primary" do %>
+  Edit  <%= @user.first_name %>'s  Profile
+<% end %>
+
+<%= link_to root_path, method: :get, :class => "btn btn-primary" do %>
+  Home
+<% end %>
+</span>
