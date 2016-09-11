@@ -25,6 +25,16 @@ COMMENTS = [
   }
 ]
 
+NBA_TEAMS = [
+  {
+    name: "New York Knicks",
+    conference: "East",
+    division: "Atlantic",
+    scores: [78, 81, 110, 93, 102]
+  }
+]
+
 User.create(USERS)
 Discussion.create(DISCUSSIONS)
 Comment.create(COMMENTS)
+NbaTeam.create(NBA_TEAMS)
