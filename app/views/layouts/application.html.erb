@@ -4,30 +4,40 @@
     <title>WhoWouldWin</title>
     <%= csrf_meta_tags %>
 
+    <link href="justified-nav.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Custom styles for this template -->
   </head>
 
-  <body>
-    <% if current_user %>
-      <%= link_to root_path, method: :get, :class => "btn btn-primary" do %>
-        Home
-      <% end %>
-      <%= link_to "Profile", current_user, :class => 'btn btn-primary' %>
-      <%= link_to "Discussion Board", discussions_path, :class => 'btn btn-primary' %></li>
-      <%= link_to "#", method: :get, :class => "btn btn-primary" do %>
-      Simulation
-      <% end %>
-      <%= link_to "Logout", "/logout", :class => 'btn btn-primary' %></li>
-    <% else %>
-      <%= link_to 'Login', login_path, :class => 'btn btn-primary' %>
-      <%= link_to signup_path, method: :get, :class => "btn btn-primary" do %>
-      Sign Up
-      <% end %>
-    <% end %><br>
+<body>
+  <div class="container">
 
-    <%= yield %>
+    <div class="masthead">
+      <h3 class="text-muted">Who Would Win?</h3>
+      <nav>
+      <% if current_user %>
+        <ul class="nav nav-justified">
+          <li><%= link_to "Home", root_path, method: :get, :class => ""  %></li>
+          <li class="active"><%= link_to "Profile", current_user, :class => "" %></li>
+          <li><%= link_to "Discussion Board", discussions_path, :class => "" %></li>
+          <li><%= link_to "Simulation", "#", method: :get, :class => "" %></li>
+          <li><%= link_to "Logout", "/logout", :class => "" %></li>
+        </ul>
+      <% else %>
+        <ul class="nav nav-justified">
+          <li><%= link_to 'Login', login_path, :class => "" %></li>
+          <li><%= link_to "Sign Up", signup_path, method: :get, :class => "" %></li>
+        </ul>
+      <% end %><br>
+      </nav>
+    </div>
+  <%= yield %>
 
-  </body>
+  </div> <!-- /container -->
+</body>
 
 </html>
