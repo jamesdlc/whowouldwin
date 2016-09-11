@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   include DiscussionsHelper
   include AuthHelper
 
-  before_action :logged_in?
+  # before_action :logged_in?
   before_action :find_discussion, except: [:index]
   before_action :find_comment, only: [:edit, :update, :destroy]
 
@@ -42,7 +42,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     flash[:notice] = "Your comment was successfully deleted."
-    redirect_to show_discussion_path
+    redirect_to discussion_path
   end
 
   private

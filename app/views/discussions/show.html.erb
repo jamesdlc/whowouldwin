@@ -8,6 +8,8 @@ Posted by: <%= @discussion.user.user_name %> <br>
 <%= link_to "Comment this post", new_comment_path, method: :get, :class=> "btn btn-primary" %> <br>
 
 <% @discussion.comments.each do |f| %>
-  <%= f.content %> <br>
-  Posted by: <%= f.user.first_name %><br>
+  "<%= f.content %>"
+  Posted by: <%= f.user.first_name %>
+  <%= link_to "Edit", edit_comment_path(@discussion.id, f.id), method: :get, :class=> "" %>
+  <%= link_to "Delete", delete_comment_path(@discussion.id, f.id), method: :delete, :class=> "" %><br>
 <% end %>
