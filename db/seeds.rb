@@ -17,5 +17,14 @@ DISCUSSIONS = [
   }
 ]
 
+COMMENTS = [
+  {
+    user_id: 1,
+    content: "Why are you saying hello to the world?",
+    discussion_id: 1
+  }
+]
+
 User.create(USERS)
 Discussion.create(DISCUSSIONS)
+Comment.create(COMMENTS)

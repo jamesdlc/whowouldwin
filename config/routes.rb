@@ -20,4 +20,10 @@ get '/discussions/:discussion_id/edit', to: 'discussions#edit', as: "edit_discus
 patch '/discussions/:discussion_id', to: "discussions#update", as: "update_discussion"
 delete '/discussions/:discussion_id', to: "discussions#destroy", as: "delete_discussion"
 
+get '/discussions/:discussion_id/comments/new', to: "comments#new", as: "new_comment"
+post '/discussions/:discussion_id/comments', to: "comments#create", as: "post_comment"
+get '/discussions/:discussion_id/comments/:id/edit', to: "comments#edit", as: "edit_comment"
+patch '/discussions/:discussion_id/comments/:id', to: "comments#update", as: "update_comment"
+delete '/discussions/:discussion_id/comments/:id', to: "comments#destroy", as: "delete_comment"
+
 end

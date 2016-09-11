@@ -1,6 +1,13 @@
 Posted by: <%= @discussion.user.user_name %> <br>
 <%= @discussion.title %> <br>
 <%= @discussion.content %> <br>
-
 <%= link_to "Edit Post", edit_discussion_path, method: :get, :class=> "btn btn-info" %>
 <%= link_to "Delete Post", delete_discussion_path, method: :delete, :class=> "btn btn-danger" %>
+
+<h4>Comments</h4>
+<%= link_to "Comment this post", new_comment_path, method: :get, :class=> "btn btn-primary" %> <br>
+
+<% @discussion.comments.each do |f| %>
+  <%= f.content %> <br>
+  Posted by: <%= f.user.first_name %><br>
+<% end %>
