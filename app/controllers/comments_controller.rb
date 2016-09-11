@@ -2,9 +2,10 @@ class CommentsController < ApplicationController
   include DiscussionsHelper
   include AuthHelper
 
-  # before_action :logged_in?
+  before_action :logged_in?
   before_action :find_discussion, except: [:index]
   before_action :find_comment, only: [:edit, :update, :destroy]
+  before_action :is_owner!, only: [:edit, :update, :destroy]
 
   def index
     @comments = Comment.all
@@ -30,7 +31,6 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    comment_ownership!
   end
 
   def update
@@ -47,21 +47,20 @@ class CommentsController < ApplicationController
 
   private
 
-  def find_comment
-    @comment = Comment.find_by_id(params[:id])
-  end
+    def find_comment
+      @comment = Comment.find_by_id(params[:id])
+    end
 
-  def comment_params
-    params.require(:comment).permit(:content)
-  end
+    def comment_params
+      params.require(:comment).permit(:content)
+    end
 
-  def current_user_is_op?
-    current_user.id == @comment.user_id
-  end
+    def current_user_is_original_poster?
+      current_user.id == @comment.user_id
+    end
 
-  def comment_ownership!
-    flash[:bruh] = true
-    auth_fail("U ain't slick smh", discussions_path) unless current_user_is_op?
-  end
+    def is_owner!
+      auth_fail("Try again", discussion_path) unless current_user_is_original_poster?
+    end
 
 end
