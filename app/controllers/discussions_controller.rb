@@ -1,5 +1,8 @@
 class DiscussionsController < ApplicationController
 
+  include DiscussionsHelper
+  include AuthHelper
+
   before_action :find_discussion, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -7,7 +10,6 @@ class DiscussionsController < ApplicationController
   end
 
   def show
-    @discussion = Discussion.find_by_id(params[:id])
   end
 
   def new
@@ -16,10 +18,11 @@ class DiscussionsController < ApplicationController
 
   def create
     @discussion = Discussion.new(discussion_params)
+    @discussion[:user_id] = current_user[:id]
     if @discussion.save
       redirect_to discussions_path
     else
-      redirect_to root_path
+      redirect_to new_discussion_path
     end
   end
 

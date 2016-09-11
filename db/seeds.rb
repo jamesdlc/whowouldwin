@@ -10,11 +10,11 @@ USERS = [
 ]
 
 DISCUSSIONS = [
-{
-  user_id: 1,
-  title: "Test",
-  content: "Hello World"
-}
+  {
+    user_id: 1,
+    title: "Test",
+    content: "Hello World"
+  }
 ]
 
 User.create(USERS)

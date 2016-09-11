@@ -4,10 +4,11 @@
   <h1>New Discussion</h1>
     <%= form_for @discussion do |f| %>
       <%= f.text_field :title, :placeholder => "Title"%><br>
-      <%= f.text_field :content, :placeholder => "Content" %><br>
+      <%= f.text_area :content, :placeholder => "Content" %><br>
       <%= f.submit "Submit", :class=>"btn btn-primary" %>
     <% end %>
-    <%= link_to root_path, method: :get, :class => "btn btn-primary" do %>
-      Home
-    <% end %>
 </div>
+
+<%= link_to root_path, method: :get, :class => "btn btn-primary" do %>
+  Home
+<% end %>

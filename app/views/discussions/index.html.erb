@@ -1,7 +1,12 @@
+
 <div class="discussions-index">
   <% @discussions.each do |d| %>
     <%= d.title %> <br>
     <%= d.content %> <br>
-    <%= d.created_at %>
-<% end %>
+    <%= d.created_at %> <br>
+  <% end %>
 </div>
+
+<%= link_to new_discussion_path, method: :get, :class => "btn btn-primary" do %>
+  Post a new Discussion
+<% end %>

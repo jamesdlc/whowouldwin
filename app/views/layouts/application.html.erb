@@ -9,6 +9,22 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <%= link_to root_path, method: :get, :class => "btn btn-primary" do %>
+        Home
+      <% end %>
+      <%= link_to "Profile", current_user, :class => 'btn btn-primary' %>
+      <%= link_to "Discussion Board", discussions_path, :class => 'btn btn-primary' %></li>
+      <%= link_to "#", method: :get, :class => "btn btn-primary" do %>
+      Simulation
+      <% end %>
+      <%= link_to "Logout", "/logout", :class => 'btn btn-primary' %></li>
+    <% else %>
+      <%= link_to 'Login', login_path, :class => 'btn btn-primary' %>
+      <%= link_to signup_path, method: :get, :class => "btn btn-primary" do %>
+      Sign Up
+      <% end %>
+    <% end %><br>
 
     <%= yield %>
 
