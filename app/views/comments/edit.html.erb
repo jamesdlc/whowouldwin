@@ -1,0 +1,7 @@
+<div class="edit-comment">
+  <h5>Edit Comment</h5>
+    <%= form_for [@discussion, @comment], :url => update_comment_path do |f| %>
+      <%= f.text_area :content, :length=>"500", :placeholder=>"Content" %><br>
+      <%= f.submit "Submit", :class=>"btn btn-primary" %>
+    <% end %><br />
+</div>
