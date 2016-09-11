@@ -1,8 +1,7 @@
 
 <div class="discussions-index">
   <% @discussions.each do |d| %>
-    <%= d.title %> <br>
-    <%= d.content %> <br>
+    <%= link_to "#{d.title}", discussion_path(d), method: :get %>
     <%= d.created_at %> <br>
   <% end %>
 </div>

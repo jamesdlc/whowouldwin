@@ -31,15 +31,13 @@ class DiscussionsController < ApplicationController
 
   def update
     if @discussion.update(discussion_params)
-    redirect_to root_path
+      redirect_to discussion_path(@discussion)
     end
   end
 
   def destroy
-    if auth_through_article
-      @discussion.destroy
-      redirect_to root_path
-    end
+    @discussion.destroy
+    redirect_to discussions_path
   end
 
   private

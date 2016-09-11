@@ -1,0 +1,8 @@
+<div class="edit-discussion-form">
+  <h1>Edit Discussion</h1>
+    <%= form_for @discussion, url: update_discussion_path, method: :patch do |f| %>
+      <%= f.text_field :title, :placeholder => "Title"%><br>
+      <%= f.text_area :content, :placeholder => "Content" %><br>
+      <%= f.submit "Submit", :class=>"btn btn-primary" %>
+    <% end %>
+</div>
