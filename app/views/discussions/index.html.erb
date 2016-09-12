@@ -20,24 +20,24 @@
         		<th class="hidden-xs col-md-4">Author</th>
         	</tr>
         </thead>
-      <tbody>
-      <% @discussions.each do |b| %>
-      <tr>
-        <td class="col-md-6">
-          <strong><%= link_to "#{b.title}", discussion_path(b), method: :get %></strong>
-        </td>
-        <td class="col-md-1 text-right">
-          <span class="badge">1</span>
-        </td>
-        <td class="col-md-1 text-right">
-          <span class="badge">41</span>
-        </td>
-        <td class="col-md-4 hidden-xs">
-          <%= link_to "#{b.user.user_name}", user_path(b.user_id), method: :get %>
-        </td>
-      </tr>
-      <% end %>
-      <tbody>
+        <tbody>
+          <% @discussions.each do |b| %>
+            <tr>
+              <td class="col-md-6">
+                <strong><%= link_to "#{b.title}", discussion_path(b), method: :get %></strong>
+              </td>
+              <td class="col-md-1 text-right">
+                <span class="badge">1</span>
+              </td>
+              <td class="col-md-1 text-right">
+                <span class="badge">41</span>
+              </td>
+              <td class="col-md-4 hidden-xs">
+                <%= link_to "#{b.user.user_name}", user_path(b.user_id), method: :get %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
       </table>
     </div>
   </div>

@@ -40,9 +40,12 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    flash[:notice] = "You can't delete that"
-    flash[:notice] = "Your comment was successfully deleted."
-    redirect_to discussion_path
+    if !@comment.destroy
+      flash[:notice] = "You can't delete that"
+    else
+      flash[:notice] = "Your comment was successfully deleted."
+      redirect_to discussion_path
+    end
   end
 
   private
