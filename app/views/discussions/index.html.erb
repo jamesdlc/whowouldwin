@@ -27,7 +27,7 @@
                 <strong><%= link_to "#{b.title}", discussion_path(b), method: :get %></strong>
               </td>
               <td class="col-md-1 text-right">
-                <span class="badge">1</span>
+                <span class="badge"> <%= b.comments.count %> </span>
               </td>
               <td class="col-md-1 text-right">
                 <span class="badge">41</span>
