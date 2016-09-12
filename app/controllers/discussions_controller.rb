@@ -54,7 +54,7 @@ class DiscussionsController < ApplicationController
   end
 
   def is_owner!
-    auth_fail("Try again", discussion_path) unless current_user_is_original_poster?
+    auth_fail("That doesn't belong to you.", discussion_path) unless current_user_is_original_poster?
   end
 
 end

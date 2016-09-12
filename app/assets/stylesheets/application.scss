@@ -14,3 +14,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .secondaryz {
+   border: .5px solid black; /* this was 1px earlier */
+  }

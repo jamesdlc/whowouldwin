@@ -40,7 +40,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment.destroy
+    flash[:notice] = "You can't delete that"
     flash[:notice] = "Your comment was successfully deleted."
     redirect_to discussion_path
   end
@@ -60,7 +60,7 @@ class CommentsController < ApplicationController
     end
 
     def is_owner!
-      auth_fail("Try again", discussion_path) unless current_user_is_original_poster?
+      auth_fail("That doesn't belong to you.", discussion_path) unless current_user_is_original_poster?
     end
 
 end

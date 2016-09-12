@@ -28,7 +28,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><%= link_to "Home", root_path, method: :get, :class => ""  %></li>
-            <li><%= link_to "Discussion Board", discussions_path, :class => "" %></li>
+            <li><%= link_to "Smack Talk", discussions_path, :class => "" %></li>
             <li><%= link_to "Simulation", simulation_path, method: :get, :class => "" %></li>
             <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -58,7 +58,7 @@
     <div class="masthead">
     <% flash.each do |name, msg| %>
       <p>
-        <small> <%= name.capitalize %>: <%= msg %> </small>
+        <%= name.capitalize %>: <%= msg %>
       </p>
     <% end %>
 
