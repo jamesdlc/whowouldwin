@@ -31,6 +31,12 @@ NBA_TEAMS = [
     conference: "East",
     division: "Atlantic",
     scores: [78, 81, 110, 93, 102]
+  },
+  {
+    name: "Golden State Warriors",
+    conference: "West",
+    division: "Pacific",
+    scores: [102, 115, 132, 108, 122]
   }
 ]
 

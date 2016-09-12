@@ -3,13 +3,11 @@
   <head>
     <title>WhoWouldWin</title>
     <%= csrf_meta_tags %>
-
     <link href="justified-nav.css" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <!-- Custom styles for this template -->
   </head>
 
@@ -31,7 +29,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><%= link_to "Home", root_path, method: :get, :class => ""  %></li>
             <li><%= link_to "Discussion Board", discussions_path, :class => "" %></li>
-            <li><%= link_to "Simulation", "#", method: :get, :class => "" %></li>
+            <li><%= link_to "Simulation", simulation_path, method: :get, :class => "" %></li>
             <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -58,6 +56,12 @@
         </div><!--/.container-fluid -->
       </nav>
     <div class="masthead">
+    <% flash.each do |name, msg| %>
+      <p>
+        <small> <%= name.capitalize %>: <%= msg %> </small>
+      </p>
+    <% end %>
+
     <%= yield %>
     </div>
 
