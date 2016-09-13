@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       @user.image_url = "https://s-media-cache-ak0.pinimg.com/564x/dd/49/dd/dd49dd83e894321a9402465c98ebc386.jpg"
     end
     if @user.save
-      # login(@user)
+      login(@user)
       redirect_to root_path
     else
 

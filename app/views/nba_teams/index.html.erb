@@ -1,7 +1,4 @@
-Test <br>
 
-<% @nbateams.each do |f| %>
-  <%= f.name %> <br>
-  <%= f.division %> <br>
 
-<% end %>
+<%= select_tag @nbateam , options_for_select(@nbateams.collect{ |u| [u.name, u.id] }) %>
+<%= select_tag @nbateam2 , options_for_select(@nbateams.collect{ |y| [y.name, y.id] }) %>

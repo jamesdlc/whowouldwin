@@ -21,4 +21,8 @@ include NbaTeamsHelper
       end
     end
 
+    def whatever(team1, team2)
+      simulation_run_path(team1,team2)
+    end
+
 end
