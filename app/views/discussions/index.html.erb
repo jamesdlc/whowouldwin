@@ -33,7 +33,12 @@
                 <%= link_to "#{b.user.user_name}", user_path(b.user_id), method: :get %>
               </td>
               <td class="col-md-4 hidden-xs">
-                 Comment by: <%= b.comments.last.user.user_name %>  <%= b.comments.last.created_at %>
+
+                 <% if b.comments.count > 0 %>
+                  <%= b.comments.last.user.user_name %> commented at <%= b.comments.last.created_at %>
+                 <% elsif %>
+                  <%= b.user.user_name %> started at <%= b.created_at %>
+                 <% end %>
               </td>
             </tr>
           <% end %>
