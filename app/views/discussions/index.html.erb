@@ -14,26 +14,26 @@
       <table class="table table-hover table-striped">
         <thead>
         	<tr>
-        		<th class="col-md-6">Title</th>
-        		<th class="col-md-1 text-right">Replies</th>
-        		<th class="col-md-1 text-right">Recent Activity: </th>
-        		<th class="hidden-xs col-md-4">Author</th>
+        		<th class="col-md-5">Title</th>
+        		<th class="col-md-1">Replies</th>
+            <th class="hidden-xs col-md-2">Author</th>
+        		<th class="col-md-4">Latest Activity: </th>
         	</tr>
         </thead>
         <tbody>
           <% @discussions.each do |b| %>
             <tr>
-              <td class="col-md-6">
+              <td class="col-md-5">
                 <strong><%= link_to "#{b.title}", discussion_path(b), method: :get %></strong>
               </td>
-              <td class="col-md-1 text-right">
+              <td class="col-md-1">
                 <span class="badge"> <%= b.comments.count %> </span>
               </td>
-              <td class="col-md-1 text-right">
-                <span class="badge">41</span>
+              <td class="col-md-2 ">
+                <%= link_to "#{b.user.user_name}", user_path(b.user_id), method: :get %>
               </td>
               <td class="col-md-4 hidden-xs">
-                <%= link_to "#{b.user.user_name}", user_path(b.user_id), method: :get %>
+                 Comment by: <%= b.comments.last.user.user_name %>  <%= b.comments.last.created_at %>
               </td>
             </tr>
           <% end %>
