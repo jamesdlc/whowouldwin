@@ -1,6 +1,5 @@
+Choose another team.<br>
+
 <% @nbateams.each do |team| %>
 <%= link_to team.name, result_path(@nbateam,team.id), method: :get %> <br>
 <% end %>
-
-
-second
