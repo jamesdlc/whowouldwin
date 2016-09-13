@@ -27,7 +27,9 @@ patch '/discussions/:discussion_id/comments/:id', to: "comments#update", as: "up
 delete '/discussions/:discussion_id/comments/:id', to: "comments#destroy", as: "delete_comment"
 
 get '/simulation', to: "nba_teams#index", as: "simulation"
-get '/simulation/:nba_team_id/vs/:id', to: "nba_teams#show", as: "simulation_run"
+get '/simulation/:nba_team_id', to: "nba_teams#show_first", as: "set_first_team"
+get '/simulation/:nba_team_id/vs', to: "nba_teams#show_second", as: "set_second_team"
+get '/simulation/:nba_team_id/vs/:id', to: "nba_teams#result", as: "result"
 
 
 end

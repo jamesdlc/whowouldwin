@@ -1,0 +1,2 @@
+class SecondNbaTeam < ApplicationRecord
+end

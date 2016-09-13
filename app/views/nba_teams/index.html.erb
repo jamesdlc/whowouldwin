@@ -1,4 +1,6 @@
 
 
-<%= select_tag @nbateam , options_for_select(@nbateams.collect{ |u| [u.name, u.id] }) %>
-<%= select_tag @nbateam2 , options_for_select(@nbateams.collect{ |y| [y.name, y.id] }) %>
+
+<% @nbateams.each do |t| %>
+<%= link_to t.name, set_first_team_path(t), method: :get %> <br>
+<% end %>

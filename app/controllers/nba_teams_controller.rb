@@ -6,10 +6,27 @@ include NbaTeamsHelper
     @nbateams = NbaTeam.all
   end
 
-  def show
+  def show_first
     @nbateam = NbaTeam.find_by_id(params[:nba_team_id])
     @nbateam2 = NbaTeam.find_by_id(params[:id])
-    @comparison = compare(@nbateam2, @nbateam)
+    @nbateams = NbaTeam.all
+
+    # @comparison = compare(@nbateam2, @nbateam)
+  end
+
+  def show_second
+    @nbateams = NbaTeam.all
+    @nbateam = NbaTeam.find_by_id(params[:nba_team_id])
+
+  end
+
+  def result
+    @nbateam = NbaTeam.find_by_id(params[:nba_team_id])
+    @nbateam2 = NbaTeam.find_by_id(params[:id])
+    if @nbateam.id == @nbateam2.id
+      flash[:notice] = "You can't pick the same team twice"
+      redirect_to set_second_team_path
+    end
   end
 
 
@@ -21,8 +38,6 @@ include NbaTeamsHelper
       end
     end
 
-    def whatever(team1, team2)
-      simulation_run_path(team1,team2)
-    end
+
 
 end
