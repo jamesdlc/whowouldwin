@@ -1,13 +1,85 @@
+<div class="panel panel-default" id="a9" >
+	<div class="panel-heading">
+		<div class="panel-title">
+      <strong> Matchup Results </strong>
+    </div>
+	</div>
+	<div class="panel-body thread-row">
+		<div class="row thread-row">
+			<div class="col-xs-12 visible-xs-block">
+				<div class="clerafix top-border">&nbsp;</div>
+			</div>
+			<div class="col-md-4 text-right">
+        <img src="<%= @nbateam.img_url %>" class="result-image">
+        <h4><%= @nbateam.name %></h4>
+			</div>
+      <div class="col-md-4 text-center">
+				<div class="text-muted">
+          <h1>vs</h1>
+        </div>
+			</div>
+      <div class="col-md-4 text-left">
+        <img src="<%= @nbateam2.img_url %>" class="result-image"><br>
+        <h4><%= @nbateam2.name %></h4>
+			</div>
+		</div>
+    <div class="row thread-row">
+      <div class="col-xs-12 visible-xs-block">
+        <div class="clerafix top-border">&nbsp;</div>
+      </div>
+      <div class="col-md-4 text-right">
+        <% if @nbateam.mean_score_of_last_five > @nbateam2.mean_score_of_last_five %>
+          <h1 class="win-green">W</h1>
+        <% else %>
+          <h1 class="lose-red">L</h1>
+        <% end %>
+      </div>
+      <div class="col-md-4 text-center">
 
+      </div>
+      <div class="col-md-4 text-left">
+        <% if @nbateam2.mean_score_of_last_five > @nbateam.mean_score_of_last_five %>
+          <h1 class="win-green">W</h1>
+        <% else %>
+          <h1 class="lose-red">L</h1>
+        <% end %>
+      </div>
+    </div>
+    <div class="row thread-row">
+      <div class="col-xs-12 visible-xs-block">
+        <div class="clerafix top-border">&nbsp;</div>
+      </div>
+      <div class="col-md-4 text-right">
+        <h3><%= @nbateam.mean_score_of_last_five %></h3>
 
-  <img src="<%= @nbateam.img_url %>" class="result-image"> vs <img src="<%= @nbateam2.img_url %>" class="result-image"><br>
-
-
-<%= @nbateam.name %><br>
-
-<%= @nbateam2.name %><br>
-
-
-result<br>
-
-<%= @comparison %>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="text-muted">
+          <h4>score</h4>
+        </div>
+      </div>
+      <div class="col-md-4 text-left">
+        <h3><%= @nbateam2.mean_score_of_last_five %></h3>
+      </div>
+    </div>
+    <div class="row thread-row">
+      <div class="col-xs-12 visible-xs-block">
+        <div class="clerafix top-border">&nbsp;</div>
+      </div>
+      <div class="col-md-4 text-center">
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="text-muted">
+          <%= @comparison %>
+        </div>
+      </div>
+      <div class="col-md-4 text-center">
+      </div>
+    </div>
+	</div>
+	<div class="panel-footer clearfix">
+		<div class="pull-right">
+			&nbsp;
+		</div>
+	</div>
+</div>

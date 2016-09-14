@@ -15,6 +15,8 @@
  *= require_tree .
  *= require_self
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
  .secondaryz {
    border: .5px solid black; /* this was 1px earlier */
@@ -22,7 +24,7 @@
 
  .team-logo {
    height: 40px;
-   widith: 40px;
+   width: 40px;
  }
 
 .result-image {
@@ -35,7 +37,20 @@
 .team-name-logo-row {
   margin-bottom: 20px;
 }
+
 .division {
   background-color: #f2f2f2;
   border-radius: 5px;
+}
+
+.win-green {
+  color: green;
+}
+
+.lose-red {
+  color: red;
+}
+
+.fa-2x {
+  margin-left: 6px;
 }

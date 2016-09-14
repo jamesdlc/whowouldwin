@@ -13,11 +13,16 @@ class UsersController < ApplicationController
   end
 
   def new
+    if current_user != nil
+      flash[:notice] = "Already logged in"
+      redirect_to root_path
+    end
     @user = User.new
   end
 
   def create
     @user = User.new(user_params)
+
     if @user.image_url == ""
       @user.image_url = "https://s-media-cache-ak0.pinimg.com/564x/dd/49/dd/dd49dd83e894321a9402465c98ebc386.jpg"
     end
