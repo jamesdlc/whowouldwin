@@ -1,3 +1,4 @@
+<img src="<%= @nbateam.img_url %>" > vs
 <div class="panel-group" id="accordion_recent_topics">
   <div class="panel panel-default">
     <a  class="panel-default" data-toggle="collapse" data-parent="#accordion_recent_topics" href="#recent_topics">
@@ -10,45 +11,93 @@
           <thead>
           	<tr>
           		<th class="col-md-6">
-                <h1>Western Conference</h1>
-                 <h4>Pacific</h4>
-                <% @nbateams.each do |team| %>
-                  <% if team.division == "Pacific" %>
-                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                <h2>Western Conference</h2>
+                <h4 class="division">Pacific</h4>
+                <% @nbateams.each do |t| %>
+                  <% if t.division == "Pacific" %>
+                    <div class="row team-name-logo-row">
+                      <div class="col-md-1">
+                        <img src="<%= t.img_url %>" class="team-logo" >
+                      </div>
+                      <div class="col-md-11">
+                        <%= link_to t.name, result_path(@nbateam, t), method: :get %> <br>
+                        <div class="label label-default"> <%= t.abbreviation %> </div>
+                      </div>
+                    </div>
                   <% end %>
                 <% end %>
                 <p>
-                <h4>Southwest</h4>
-                <% @nbateams.each do |team| %>
-                  <% if team.division == "Southwest" %>
-                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                <h4 class="division">Southwest</h4>
+                <% @nbateams.each do |t| %>
+                  <% if t.division == "Southwest" %>
+                    <div class="row team-name-logo-row">
+                      <div class="col-md-1">
+                        <img src="<%= t.img_url %>" class="team-logo" >
+                      </div>
+                      <div class="col-md-11">
+                        <%= link_to t.name, result_path(@nbateam, t), method: :get %> <br>
+                        <div class="label label-default"> <%= t.abbreviation %> </div>
+                      </div>
+                    </div>
                   <% end %>
                 <% end %>
-                <h4>Northwest</h4>
-                <% @nbateams.each do |team| %>
-                  <% if team.division == "Northwest" %>
-                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                <h4 class="division">Northwest</h4>
+                <% @nbateams.each do |t| %>
+                  <% if t.division == "Northwest" %>
+                    <div class="row team-name-logo-row">
+                      <div class="col-md-1">
+                        <img src="<%= t.img_url %>" class="team-logo" >
+                      </div>
+                      <div class="col-md-11">
+                        <%= link_to t.name, result_path(@nbateam, t), method: :get %> <br>
+                        <div class="label label-default"> <%= t.abbreviation %> </div>
+                      </div>
+                    </div>
                   <% end %>
                 <% end %>
               </th>
           		<th class="col-md-6">
-                <h1>Eastern Conference</h1>
-                <h4>Atlantic</h4>
-                <% @nbateams.each do |team| %>
-                  <% if team.division == "Atlantic" %>
-                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                <h2>Eastern Conference</h2>
+                <h4 class="division">Atlantic</h4>
+                <% @nbateams.each do |t| %>
+                  <% if t.division == "Atlantic" %>
+                    <div class="row team-name-logo-row">
+                      <div class="col-md-1">
+                        <img src="<%= t.img_url %>" class="team-logo" >
+                      </div>
+                      <div class="col-md-11">
+                        <%= link_to t.name, result_path(@nbateam, t), method: :get %> <br>
+                        <div class="label label-default"> <%= t.abbreviation %> </div>
+                      </div>
+                    </div>
                   <% end %>
                 <% end %>
-                <h4>Central</h4>
-                <% @nbateams.each do |team| %>
-                  <% if team.division == "Central" %>
-                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                <h4 class="division">Central</h4>
+                <% @nbateams.each do |t| %>
+                  <% if t.division == "Central" %>
+                    <div class="row team-name-logo-row">
+                      <div class="col-md-1">
+                        <img src="<%= t.img_url %>" class="team-logo" >
+                      </div>
+                      <div class="col-md-11">
+                        <%= link_to t.name, result_path(@nbateam, t), method: :get %> <br>
+                        <div class="label label-default"> <%= t.abbreviation %> </div>
+                      </div>
+                    </div>
                   <% end %>
                 <% end %>
-                <h4>Southeast</h4>
-                <% @nbateams.each do |team| %>
-                  <% if team.division == "Southeast" %>
-                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                <h4 class="division">Southeast</h4>
+                <% @nbateams.each do |t| %>
+                  <% if t.division == "Southeast" %>
+                    <div class="row team-name-logo-row">
+                      <div class="col-md-1">
+                        <img src="<%= t.img_url %>" class="team-logo" >
+                      </div>
+                      <div class="col-md-11">
+                        <%= link_to t.name, result_path(@nbateam, t), method: :get %> <br>
+                        <div class="label label-default"> <%= t.abbreviation %> </div>
+                      </div>
+                    </div>
                   <% end %>
                 <% end %>
               </th>
