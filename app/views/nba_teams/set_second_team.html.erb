@@ -1,47 +1,65 @@
-Choose another team.<br>
-
-<h1>Western Conference</h1>
- <br>
- <h4>Pacific</h4>
-<% @nbateams.each do |team| %>
-  <% if team.division == "Pacific" %>
-    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
-  <% end %>
-<% end %>
-<p>
-<h4>Southwest</h4>
-<% @nbateams.each do |team| %>
-  <% if team.division == "Southwest" %>
-    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
-  <% end %>
-<% end %>
-
-<h4>Northwest</h4>
-<% @nbateams.each do |team| %>
-  <% if team.division == "Northwest" %>
-    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
-  <% end %>
-<% end %>
-
-<h1>Eastern Conference</h1>
-
-<h4>Atlantic</h4>
-<% @nbateams.each do |team| %>
-  <% if team.division == "Atlantic" %>
-    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
-  <% end %>
-<% end %>
-
-<h4>Central</h4>
-<% @nbateams.each do |team| %>
-  <% if team.division == "Central" %>
-    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
-  <% end %>
-<% end %>
-
-<h4>Southeast</h4>
-<% @nbateams.each do |team| %>
-  <% if team.division == "Southeast" %>
-    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
-  <% end %>
-<% end %>
+<div class="panel-group" id="accordion_recent_topics">
+  <div class="panel panel-default">
+    <a  class="panel-default" data-toggle="collapse" data-parent="#accordion_recent_topics" href="#recent_topics">
+      <div class="panel-heading">
+        <i class="fa fa-bullhorn"></i> <strong> Choose Team 2 </strong>
+      </div>
+    </a>
+      <div id="recent_topics" class="panel-collapse collapse in">
+        <table class="table table-hover table-striped">
+          <thead>
+          	<tr>
+          		<th class="col-md-6">
+                <h1>Western Conference</h1>
+                 <h4>Pacific</h4>
+                <% @nbateams.each do |team| %>
+                  <% if team.division == "Pacific" %>
+                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                  <% end %>
+                <% end %>
+                <p>
+                <h4>Southwest</h4>
+                <% @nbateams.each do |team| %>
+                  <% if team.division == "Southwest" %>
+                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                  <% end %>
+                <% end %>
+                <h4>Northwest</h4>
+                <% @nbateams.each do |team| %>
+                  <% if team.division == "Northwest" %>
+                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                  <% end %>
+                <% end %>
+              </th>
+          		<th class="col-md-6">
+                <h1>Eastern Conference</h1>
+                <h4>Atlantic</h4>
+                <% @nbateams.each do |team| %>
+                  <% if team.division == "Atlantic" %>
+                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                  <% end %>
+                <% end %>
+                <h4>Central</h4>
+                <% @nbateams.each do |team| %>
+                  <% if team.division == "Central" %>
+                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                  <% end %>
+                <% end %>
+                <h4>Southeast</h4>
+                <% @nbateams.each do |team| %>
+                  <% if team.division == "Southeast" %>
+                    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+                  <% end %>
+                <% end %>
+              </th>
+          	</tr>
+          </thead>
+        </table>
+      </div>
+    <div class="panel-footer clearfix">
+      <div class="pull-right">
+        &nbsp;
+      </div>
+    </div>
+  </div>
+</div>
