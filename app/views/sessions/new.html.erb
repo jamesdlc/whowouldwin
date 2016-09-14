@@ -1,7 +1,26 @@
-<h5>Log In</h5>
-
-<%= form_tag '/login' do %>
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit", :class => "btn btn-primary" %>
-<% end %>
+<div class="panel panel-default" id="a9" >
+	<div class="panel-heading">
+		<div class="text-center panel-title">
+        <h4>Log In</h4>
+    </div>
+	</div>
+	<div class="panel-body thread-row">
+		<div class="row thread-row">
+			<div class="col-xs-12 visible-xs-block">
+				<div class="clerafix top-border">&nbsp;</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+        <%= bootstrap_form_for @user do |f| %>
+          <%= f.text_field :email %>
+          <%= f.password_field :password %>
+          <%= submit_tag "Login", :class => "btn btn-primary" %>
+        <% end %>
+			</div>
+		</div>
+	</div>
+	<div class="panel-footer clearfix">
+		<div class="pull-right">
+			&nbsp;
+		</div>
+	</div>
+</div>
