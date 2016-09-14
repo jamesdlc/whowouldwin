@@ -10,9 +10,11 @@
 				<div class="clerafix top-border">&nbsp;</div>
 			</div>
 			<div class="col-md-8 col-md-offset-2">
-        <%= bootstrap_form_for @user do |f| %>
-          <%= f.text_field :email %>
-          <%= f.password_field :password %>
+				<%= form_tag '/login' do %>
+					<label>Email address</label>
+					<%= text_field_tag :email, "", :class => "form-control" %><br>
+					<label>Password</label>
+          <%= password_field_tag :password, "", :class => "form-control" %> <br>
           <%= submit_tag "Login", :class => "btn btn-primary" %>
         <% end %>
 			</div>
