@@ -1,14 +1,9 @@
-
-
-
 <div class="panel panel-default" id="a9" >
-<!-- orignal post -->
 	<div class="panel-heading">
 		<div class="panel-title">
       <% if current_user && current_user[:id] == @user.id %>
-      <h3 class="header text-center">Welcome, <%= @user.first_name %> <%= @user.last_name %>!</h3>
+        <h3 class="header text-center">Welcome, <%= @user.first_name %> <%= @user.last_name %>!</h3>
       <% end %>
-
     </div>
 	</div>
 	<div class="panel-body thread-row">
@@ -18,7 +13,6 @@
 			</div>
 			<div class="col-md-12 col-sm-3 hidden-xs text-center userblock">
         <img class="img-thumbnail avatar" src="<%=@user.image_url%>" style="height: 290px; width: 300px;" alt="Avatar" /><br>
-
 				<div class="push_bottom_5"></div>
 				<div class="label label-default"><%= @user.user_name %></div> <br>
         <div class="text-muted "><%= @user.first_name %> <%= @user.last_name %></div>
@@ -27,12 +21,11 @@
 				<div class="text-muted ">Smack Talk Posts: <%= @user.discussions.count %></div>
 				<div class="text-muted ">Member Since: <%= @user.created_at %></div>
 			</div>
-
 		</div>
-    <div class="row thread-row">
-    </div>
+    <% if current_user && current_user[:id] == @user.id %>
+    <%= link_to "Edit Your Profile ", edit_user_path(@user), method: :get, :class => "btn btn-primary col-md-6 col-md-offset-3" %>
+    <% end %>
 	</div>
-<!-- original post end  -->
 	<div class="panel-footer clearfix">
 		<div class="pull-right">
 			&nbsp;
@@ -41,7 +34,3 @@
 </div>
 <div class="row">
 </div>
-
-<% if current_user && current_user[:id] == @user.id %>
-  <%= link_to "Edit Your Profile ", edit_user_path(@user), method: :get, :class => "btn btn-primary col-md-6 col-md-offset-3" %>
-<% end %>
