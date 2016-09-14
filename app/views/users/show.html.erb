@@ -1,8 +1,10 @@
 <div class="panel panel-default" id="a9" >
 	<div class="panel-heading">
-		<div class="panel-title">
+		<div class="panel-title text-center">
       <% if current_user && current_user[:id] == @user.id %>
-        <h3 class="header text-center">Welcome, <%= @user.first_name %> <%= @user.last_name %>!</h3>
+        <h4 class="header text-center">Welcome, <%= @user.first_name %> <%= @user.last_name %>!</h4>
+			<% else %>
+			<h4>Profile Page</h4>	
       <% end %>
     </div>
 	</div>
