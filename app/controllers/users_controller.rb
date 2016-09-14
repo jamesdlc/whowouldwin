@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
 
-  # include AuthHelper
+  include AuthHelper
 
   before_action :find_user, only: [:show, :edit, :update]
+  before_action :is_owner!, only: [:edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
       login(@user)
       redirect_to root_path
     else
-
+      flash[:notice] = "Try again."
     end
   end
 
@@ -50,4 +51,13 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :user_name, :password, :image_url)
   end
+
+  def current_user_is_original_poster?
+    current_user.id == @user.id
+  end
+
+  def is_owner!
+    auth_fail("That doesn't belong to you.", user_path) unless current_user_is_original_poster?
+  end
+
 end
