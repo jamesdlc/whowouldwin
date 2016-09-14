@@ -1,5 +1,47 @@
 Choose another team.<br>
 
+<h1>Western Conference</h1>
+ <br>
+ <h4>Pacific</h4>
 <% @nbateams.each do |team| %>
-<%= link_to team.name, result_path(@nbateam,team.id), method: :get %> <br>
+  <% if team.division == "Pacific" %>
+    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+  <% end %>
+<% end %>
+<p>
+<h4>Southwest</h4>
+<% @nbateams.each do |team| %>
+  <% if team.division == "Southwest" %>
+    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+  <% end %>
+<% end %>
+
+<h4>Northwest</h4>
+<% @nbateams.each do |team| %>
+  <% if team.division == "Northwest" %>
+    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+  <% end %>
+<% end %>
+
+<h1>Eastern Conference</h1>
+
+<h4>Atlantic</h4>
+<% @nbateams.each do |team| %>
+  <% if team.division == "Atlantic" %>
+    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+  <% end %>
+<% end %>
+
+<h4>Central</h4>
+<% @nbateams.each do |team| %>
+  <% if team.division == "Central" %>
+    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+  <% end %>
+<% end %>
+
+<h4>Southeast</h4>
+<% @nbateams.each do |team| %>
+  <% if team.division == "Southeast" %>
+    <%= link_to team.name, result_path(@nbateam, team), method: :get %> <br>
+  <% end %>
 <% end %>
