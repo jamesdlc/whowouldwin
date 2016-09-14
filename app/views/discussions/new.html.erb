@@ -1,13 +1,26 @@
-
-<div class="new-discussion-form">
-  <h1>New Discussion</h1>
-    <%= form_for @discussion do |f| %>
-      <%= f.text_field :title, :placeholder => "Title"%><br>
-      <%= f.text_area :content, :placeholder => "Content" %><br>
-      <%= f.submit "Submit", :class=>"btn btn-primary" %>
-    <% end %>
+<div class="panel panel-default" id="a9" >
+	<div class="panel-heading">
+		<div class="text-center panel-title">
+        <h4>New Smack Talk Topic</h4>
+    </div>
+	</div>
+	<div class="panel-body thread-row">
+		<div class="row thread-row">
+			<div class="col-xs-12 visible-xs-block">
+				<div class="clerafix top-border">&nbsp;</div>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+        <%= bootstrap_form_for @discussion do |f| %>
+          <%= f.text_field :title, :placeholder => "Title"%>
+          <%= f.text_area :content, :placeholder => "Content" %>
+          <%= f.submit "Post Your Smack Talk", :class=>"btn btn-primary" %>
+        <% end %>
+			</div>
+		</div>
+	</div>
+	<div class="panel-footer clearfix">
+		<div class="pull-right">
+			&nbsp;
+		</div>
+	</div>
 </div>
-
-<%= link_to root_path, method: :get, :class => "btn btn-primary" do %>
-  Home
-<% end %>
