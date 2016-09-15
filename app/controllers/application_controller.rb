@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+  def not_found
+    render :file => "public/404"
+  end
   helper_method :current_user
 
 end

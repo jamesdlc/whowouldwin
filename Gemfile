@@ -36,6 +36,8 @@ gem 'font-awesome-sass'
 #ransack
 gem 'ransack', github: 'activerecord-hackery/ransack'
 
+#ffaker
+gem 'ffaker', '~> 2.2'
 
 group :production do
   gem 'rails_12factor'

@@ -1,3 +1,5 @@
+require 'ffaker'
+
 USERS = [
   {
     user_name: "swittaker",
@@ -109,3 +111,29 @@ Discussion.create(DISCUSSIONS)
 Comment.create(COMMENTS)
 NbaTeam.create(NBA_TEAMS)
 NflTeam.create(NFL_TEAMS)
+
+
+
+
+
+10.times do
+  first_name = FFaker::Name.first_name,
+  last_name =  FFaker::Name.last_name,
+  email = FFaker::Internet.safe_email,
+  password = "test",
+  image_url = FFaker::Avatar.image
+  user_name = FFaker::InternetSE.login_user_name
+  user_data = {
+    first_name: first_name,
+    last_name: last_name,
+    email: email,
+    password_digest: password,
+    image_url: image_url,
+    user_name: user_name
+  }
+  User.create(user_data)
+end
+
+
+
+p "created  #{User.count} users!"
