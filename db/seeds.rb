@@ -16,7 +16,15 @@ USERS = [
     email: "slick@rick.com",
     password_digest: "$2a$10$7W4SGCYpvVnExQIt7rgI3.8gcNA1jfhNrBeRnjbW4oOT0eGKcHYg6",
     image_url: "http://www.thefamouspeople.com/profiles/images/slick-rick-4.jpg"
-  } #pw rick
+  }, #pw rick
+  {
+    user_name: "stephenasmith",
+    first_name: "Stephen A.",
+    last_name: "Smith",
+    email: "stephensmith@aol.com",
+    password_digest: "$2a$10$cOVwvFsz5jrTeSRsXvWwtuljczix.l9L2RvEojLrBx6yMMHN1NhDq",
+    image_url: "https://blog-blogmediainc.netdna-ssl.com/upload/SportsBlogcom/105185/0551152001456464131_filepicker.jpg"
+  } #pw smith
 ]
 
 DISCUSSIONS = [
@@ -31,6 +39,15 @@ COMMENTS = [
   {
     user_id: 1,
     content: "Why are you saying hello to the world?",
+    discussion_id: 1
+  },{
+    user_id: 3,
+    content: "DISRESPECTFUL",
+    discussion_id: 1
+  },
+  {
+    user_id: 2,
+    content: "Once upon a time not long ago...",
     discussion_id: 1
   }
 ]
@@ -111,29 +128,3 @@ Discussion.create(DISCUSSIONS)
 Comment.create(COMMENTS)
 NbaTeam.create(NBA_TEAMS)
 NflTeam.create(NFL_TEAMS)
-
-
-
-
-
-10.times do
-  first_name = FFaker::Name.first_name,
-  last_name =  FFaker::Name.last_name,
-  email = FFaker::Internet.safe_email,
-  password = "test",
-  image_url = FFaker::Avatar.image
-  user_name = FFaker::InternetSE.login_user_name
-  user_data = {
-    first_name: first_name,
-    last_name: last_name,
-    email: email,
-    password_digest: password,
-    image_url: image_url,
-    user_name: user_name
-  }
-  User.create(user_data)
-end
-
-
-
-p "created  #{User.count} users!"

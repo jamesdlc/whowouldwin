@@ -1,13 +1,12 @@
-# README
+# Who Would Win?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to use it?
 
 Things you may want to cover:
 
 * Ruby version
 
-* System dependencies
+*
 
 * Configuration
 
