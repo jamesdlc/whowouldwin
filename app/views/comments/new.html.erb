@@ -14,14 +14,14 @@
                     <img class="img-thumbnail avatar" src="<%= @discussion.user.image_url  %>" alt="Avatar" />
                     <div class="push_bottom_5"></div>
                     <div class="label label-default"><%= @discussion.user.user_name %></div>
-                    <div class="text-muted text-left"><small>Smack Talk Posts: <%= @discussion.user.discussions.count + @discussion.user.comments.count %> </small></div>
-                    <div class="text-muted text-left"><small>Joined <%= @discussion.user.created_at %></small></div>
+                    <div class="text-muted text-center"><small>Smack Talk Posts: <%= @discussion.user.discussions.count + @discussion.user.comments.count %> </small></div>
+                    <div class="text-muted text-center"><small>Member Since: <%= @discussion.user.created_at.strftime("%b %d, %Y") %></small></div>
                   </div>
                   <div class="col-md-5 col-sm-6 col-xs-8">
                     <div class="clerafix hidden-xs">&nbsp;</div>
                     <div class="text-muted">
                       <span class="hidden-md hidden-lg"><i class="fa fa-calendar"></i> </span>
-                      <small><span class="hidden-sm hidden-xs">Posted:</span><%= @discussion.created_at %></small>
+                      <small><span class="hidden-sm hidden-xs">Posted:</span><%= @discussion.created_at.strftime(" %m-%e-%y %H:%M %p") %></small>
                     </div>
                   </div>
                   <div class="col-md-10 col-sm-9 col-xs-12">
@@ -48,14 +48,14 @@
 							        <img class="img-thumbnail avatar" src="<%= f.user.image_url  %>" alt="Avatar" />
 							        <div class="push_bottom_5"></div>
 							        <div class="label label-default"><%= f.user.user_name %></div>
-							        <div class="text-muted text-left"><small>Smack Talk Posts: <%= f.user.discussions.count + f.user.comments.count %></small></div>
-							        <div class="text-muted text-left"><small>Joined <%= f.user.created_at %></small></div>
+							        <div class="text-muted text-center"><small>Smack Talk Posts: <%= f.user.discussions.count + f.user.comments.count %></small></div>
+							        <div class="text-muted text-center"><small>Member Since: <%= f.user.created_at.strftime("%b %d, %Y") %></small></div>
 							      </div>
 							      <div class="col-md-5 col-sm-6 col-xs-8">
 							        <div class="clerafix hidden-xs">&nbsp;</div>
 							        <div class="text-muted">
 							          <span class="hidden-md hidden-lg"><i class="fa fa-calendar"></i> </span>
-							          <small><span class="hidden-sm hidden-xs">Posted:</span><%= f.created_at %></small>
+							          <small><span class="hidden-sm hidden-xs">Posted:</span><%= f.created_at.strftime(" %m-%e-%y %H:%M %p") %></small>
 							        </div>
 							      </div>
 							      <div class="col-md-10 col-sm-9 col-xs-12">

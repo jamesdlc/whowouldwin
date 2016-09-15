@@ -35,9 +35,9 @@
               <td class="col-md-4 hidden-xs">
 
                  <% if b.comments.count > 0 %>
-                  <%= b.comments.last.user.user_name %> commented at <%= b.comments.last.created_at %>
+                  <%= b.comments.last.user.user_name %> commented at <%= b.comments.last.created_at.strftime(" %m/%e/%y, %H:%M %p") %>
                  <% elsif %>
-                  smack talking started at <%= b.created_at %>
+                  Smack Talk started at <%= b.created_at.strftime(" %m/%e/%y %H:%M %p") %>
                  <% end %>
               </td>
             </tr>

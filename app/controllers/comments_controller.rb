@@ -23,7 +23,7 @@ class CommentsController < ApplicationController
     @discussion.comments << @comment
     if @comment.save
       flash[:notice] = "Congratulations! Your comment was successfully posted."
-      redirect_to new_comment_path(@discussion)
+      redirect_to discussion_path(@discussion)
     else
       flash[:notice] = "Please enter your comment."
       redirect_to discussion_comments_path

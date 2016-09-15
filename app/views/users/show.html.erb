@@ -4,7 +4,7 @@
       <% if current_user && current_user[:id] == @user.id %>
         <h4 class="header text-center">Welcome, <%= @user.first_name %> <%= @user.last_name %>!</h4>
 			<% else %>
-			<h4>Profile Page</h4>	
+			<h4>Profile Page</h4>
       <% end %>
     </div>
 	</div>
@@ -19,9 +19,8 @@
 				<div class="label label-default"><%= @user.user_name %></div> <br>
         <div class="text-muted "><%= @user.first_name %> <%= @user.last_name %></div>
         <div class="text-muted "><%= @user.email %></div>
-				<div class="push_bottom_5"><i class="fa fa-star"></i></div>
-				<div class="text-muted ">Smack Talk Posts: <%= @user.discussions.count %></div>
-				<div class="text-muted ">Member Since: <%= @user.created_at %></div>
+				<div class="text-muted ">Smack Talk Posts: <%= @user.discussions.count + @user.comments.count %></div>
+				<div class="text-muted ">Member Since: <%= @user.created_at.strftime("%b %d, %Y") %></div>
 			</div>
 		</div>
     <% if current_user && current_user[:id] == @user.id %>
