@@ -30,8 +30,10 @@ before_action :logged_in?
     def compare(team1, team2)
       if team1.mean_score_of_last_five > team2.mean_score_of_last_five
         return team1.name + " win. " + team2.name  + " lose. " + "Point differential:  #{ team1.mean_score_of_last_five -  team2.mean_score_of_last_five }"
-      else
+      elsif team1.mean_score_of_last_five < team2.mean_score_of_last_five
         return team2.name + " win. " + team1.name  + " lose. " + "Point differential:  #{ team2.mean_score_of_last_five -  team1.mean_score_of_last_five }"
+      else
+        return "Tie."
       end
     end
 

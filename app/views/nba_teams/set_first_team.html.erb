@@ -40,7 +40,21 @@
                 <% end %>
                 <h4 class="division">Northwest</h4>
                 <% @nbateams.each do |t| %>
-                  <% if t.division == "Northwest" %>
+                  <% if t.division == "Northwest" && t.abbreviation != "SEA" %>
+                    <div class="row team-name-logo-row">
+                      <div class="col-md-1">
+                        <img src="<%= t.img_url %>" class="team-logo" >
+                      </div>
+                      <div class="col-md-11">
+                        <%= link_to t.name, set_second_team_path(t), method: :get %> <br>
+                        <div class="label label-default"> <%= t.abbreviation %> </div>
+                      </div>
+                    </div>
+                  <% end %>
+                <% end %>
+                <h4 class="division">Past Teams</h4>
+                <% @nbateams.each do |t| %>
+                  <% if t.abbreviation == "SEA" %>
                     <div class="row team-name-logo-row">
                       <div class="col-md-1">
                         <img src="<%= t.img_url %>" class="team-logo" >
@@ -71,7 +85,7 @@
                 <% end %>
                 <h4 class="division">Central</h4>
                 <% @nbateams.each do |t| %>
-                  <% if t.division == "Central" %>
+                  <% if t.division == "Central" && t.name != "Chicago Bulls (1995-1996)" %>
                     <div class="row team-name-logo-row">
                       <div class="col-md-1">
                         <img src="<%= t.img_url %>" class="team-logo" >
@@ -86,6 +100,20 @@
                 <h4 class="division">Southeast</h4>
                 <% @nbateams.each do |t| %>
                   <% if t.division == "Southeast" %>
+                    <div class="row team-name-logo-row">
+                      <div class="col-md-1">
+                        <img src="<%= t.img_url %>" class="team-logo" >
+                      </div>
+                      <div class="col-md-11">
+                        <%= link_to t.name, set_second_team_path(t), method: :get %> <br>
+                        <div class="label label-default"> <%= t.abbreviation %> </div>
+                      </div>
+                    </div>
+                  <% end %>
+                <% end %>
+                <h4 class="division">Past Teams</h4>
+                <% @nbateams.each do |t| %>
+                  <% if t.name == "Chicago Bulls (1995-1996)" %>
                     <div class="row team-name-logo-row">
                       <div class="col-md-1">
                         <img src="<%= t.img_url %>" class="team-logo" >

@@ -59,11 +59,13 @@ NBA_TEAMS = [
   { name: "Memphis Grizzlies", conference: "Western", division: "Southwest", abbreviation: "MEM", scores: [104, 84, 99, 93, 92], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/mem.png" },
   { name: "New Orleans Pelicans", conference: "Western", division: "Southwest", abbreviation: "NOH", scores: [109, 116, 100, 102, 97], img_url: "http://l.yimg.com/xe/ipt/70x70.1.png" },
   { name: "San Antonio Spurs", conference: "Western", division: "Southwest", abbreviation: "SAS", scores: [96, 102, 86, 98, 101], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/sas.png" },
-  { name: "Denver Nuggets", conference: "Northwest", division: "Northwest", abbreviation: "DEN", scores: [99, 84, 98, 102, 106], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/den.png" },
-  { name: "Minnesota Timberwolves", conference: "Northwest", division: "Northwest", abbreviation: "MIN", scores: [144, 129, 106, 105, 124] , img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/min.png"},
-  { name: "Oklahoma City Thunder", conference: "Northwest", division: "Northwest", abbreviation: "OKC", scores: [98, 112, 112, 115, 124], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/okc.png" },
-  { name: "Portland Trail Blazers", conference: "Northwest", division: "Northwest", abbreviation: "POR", scores: [107, 106, 115, 115, 111], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/por.png" },
-  { name: "Utah Jazz", conference: "Northwest", division: "Northwest", abbreviation: "UTA", scores: [96, 92, 100, 99, 86], img_url: "https://sp.yimg.com/j/assets/ipt/UtahJazz+%281%29.png" }
+  { name: "Denver Nuggets", conference: "Western", division: "Northwest", abbreviation: "DEN", scores: [99, 84, 98, 102, 106], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/den.png" },
+  { name: "Minnesota Timberwolves", conference: "Western", division: "Northwest", abbreviation: "MIN", scores: [144, 129, 106, 105, 124] , img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/min.png"},
+  { name: "Oklahoma City Thunder", conference: "Western", division: "Northwest", abbreviation: "OKC", scores: [98, 112, 112, 115, 124], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/okc.png" },
+  { name: "Portland Trail Blazers", conference: "Western", division: "Northwest", abbreviation: "POR", scores: [107, 106, 115, 115, 111], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/por.png" },
+  { name: "Utah Jazz", conference: "Western", division: "Northwest", abbreviation: "UTA", scores: [96, 92, 100, 99, 86], img_url: "https://sp.yimg.com/j/assets/ipt/UtahJazz+%281%29.png" },
+  { name: "Seattle SuperSonics (2007-2008)", conference: "Western", division: "Northwest", abbreviation: "SEA", scores: [126, 99, 74, 80, 83], img_url: "https://d2p3bygnnzw9w3.cloudfront.net/req/201609141/tlogo/bbr/SEA-2008.png" },
+  { name: "Chicago Bulls (1995-1996)", conference: "Eastern", division: "Central", abbreviation: "CHI", scores: [103, 99, 110, 98, 112], img_url: "http://l.yimg.com/xe/i/us/sp/v/nba/teams/83/70x70/chi.png" }
 ]
 
 NFL_TEAMS = [
