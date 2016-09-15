@@ -69,12 +69,12 @@ NBA_TEAMS = [
 NFL_TEAMS = [
   { name: "Buffalo Bills", conference: "AFC", division: "East", abbreviation: "BUF", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/buf.png", scores: [7] },
   { name: "Miami Dolphins", conference: "AFC", division: "East", abbreviation: "MIA", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/mia.png", scores: [10] },
-  { name: "New England Patriots", conference: "AFC", division: "East", abbreviation: "NE", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/ne.png", scores: [23] },
+  { name: "New England Patriots", conference: "AFC", division: "East", abbreviation: "NE", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/nwe.png", scores: [23] },
   { name: "New York Jets", conference: "AFC", division: "East", abbreviation: "NYJ", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/nyj.png", scores: [22] },
   { name: "Denver Broncos", conference: "AFC", division: "West", abbreviation: "DEN", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/den.png", scores: [21] },
-  { name: "Kansas City Chiefs", conference: "AFC", division: "West", abbreviation: "KC", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/kc.png", scores: [33] },
+  { name: "Kansas City Chiefs", conference: "AFC", division: "West", abbreviation: "KC", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/kan.png", scores: [33] },
   { name: "Oakland Raiders", conference: "AFC", division: "West", abbreviation: "OAK", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/oak.png", scores: [35] },
-  { name: "San Diego Chargers", conference: "AFC", division: "West", abbreviation: "SD", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/sd.png", scores: [27] },
+  { name: "San Diego Chargers", conference: "AFC", division: "West", abbreviation: "SD", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/sdg.png", scores: [27] },
   { name: "Baltimore Ravens", conference: "AFC", division: "North", abbreviation: "BAL", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/bal.png", scores: [13] },
   { name: "Cincinnati Bengals", conference: "AFC", division: "North", abbreviation: "CIN", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/cin.png", scores: [23] },
   { name: "Cleveland Browns", conference: "AFC", division: "North", abbreviation: "CLE", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/cle.png", scores: [10] },
@@ -88,17 +88,17 @@ NFL_TEAMS = [
   { name: "Philadelphia Eagles", conference: "NFC", division: "East", abbreviation: "PHI", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/phi.png", scores: [29] },
   { name: "Washington Redskins", conference: "NFC", division: "East", abbreviation: "WAS", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/was.png", scores: [16] },
   { name: "Arizona Cardinals", conference: "NFC", division: "West", abbreviation: "ARI", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/ari.png", scores: [21] },
-  { name: "Los Angeles Rams", conference: "NFC", division: "West", abbreviation: "LA", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/la.png", scores: [0] },
-  { name: "San Francisco 49ers", conference: "NFC", division: "West", abbreviation: "SF", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/sf.png", scores: [28] },
+  { name: "Los Angeles Rams", conference: "NFC", division: "West", abbreviation: "LA", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/stl.png", scores: [0] },
+  { name: "San Francisco 49ers", conference: "NFC", division: "West", abbreviation: "SF", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/sfo.png", scores: [28] },
   { name: "Seattle Seahawks", conference: "NFC", division: "West", abbreviation: "SEA", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/sea.png", scores: [12] },
   { name: "Chicago Bears", conference: "NFC", division: "North", abbreviation: "CHI", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/chi.png", scores: [14] },
   { name: "Detroit Lions", conference: "NFC", division: "North", abbreviation: "DET", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/det.png", scores: [39] },
-  { name: "Green Bay Packers", conference: "NFC", division: "North", abbreviation: "GB", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/gb.png", scores: [27] },
+  { name: "Green Bay Packers", conference: "NFC", division: "North", abbreviation: "GB", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/gnb.png", scores: [27] },
   { name: "Minnesota Vikings", conference: "NFC", division: "North", abbreviation: "MIN", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/min.png", scores: [25] },
   { name: "Atlanta Falcons", conference: "NFC", division: "South", abbreviation: "ATL", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/atl.png", scores: [24] },
   { name: "Carolina Panthers", conference: "NFC", division: "South", abbreviation: "CAR", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/car.png", scores: [20] },
-  { name: "New Orleans Saints", conference: "NFC", division: "South", abbreviation: "NO", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/no.png", scores: [34] },
-  { name: "Tampa Bay Buccaneers", conference: "NFC", division: "South", abbreviation: "TB", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/tb.png", scores: [31] }
+  { name: "New Orleans Saints", conference: "NFC", division: "South", abbreviation: "NO", img_url: "http://l.yimg.com/xe/i/us/sp/v/nfl/teams/83/70x70/nor.png", scores: [34] },
+  { name: "Tampa Bay Buccaneers", conference: "NFC", division: "South", abbreviation: "TB", img_url: "https://s.yimg.com/xe/ipt/tampa_bay_buccaneers-2014.png", scores: [31] }
 ]
 
 

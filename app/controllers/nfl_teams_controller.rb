@@ -18,7 +18,7 @@ class NflTeamsController < ApplicationController
           @comparison = compare(@nflteam2, @nflteam)
           if @nflteam.id == @nflteam2.id
             flash[:notice] = "You can't pick the #{@nflteam.name} twice."
-            redirect_to root_path
+            redirect_to set_second_nfl_team_path
           end
         end
 
