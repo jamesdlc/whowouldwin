@@ -24,7 +24,16 @@ USERS = [
     email: "stephensmith@aol.com",
     password_digest: "$2a$10$cOVwvFsz5jrTeSRsXvWwtuljczix.l9L2RvEojLrBx6yMMHN1NhDq",
     image_url: "https://blog-blogmediainc.netdna-ssl.com/upload/SportsBlogcom/105185/0551152001456464131_filepicker.jpg"
-  } #pw smith
+   #pw smith
+  },
+  {
+    user_name: "skipbayless",
+    first_name: "Skip",
+    last_name: "Bayless",
+    email: "skipbayless@aol.com",
+    password_digest: "$2a$10$MiJGl28nib4YFq3txQ1LHOCCow5G91LttrLatOYxG63zg4au6r1PC",
+    image_url: "https://pbs.twimg.com/profile_images/3208687741/fa6b60bd0fe7467f819283a0dcf3a0e2.jpeg"
+  } #pw skip
 ]
 
 DISCUSSIONS = [
@@ -42,6 +51,11 @@ DISCUSSIONS = [
     user_id: 2,
     title: "What am I doing here?",
     content: "The world is yours!"
+  },
+  {
+    user_id: 4,
+    title: "Tim Tebow",
+    content: "All he does is win win win win win"
   }
 ]
 
@@ -59,6 +73,11 @@ COMMENTS = [
     user_id: 2,
     content: "Once upon a time not long ago...",
     discussion_id: 1
+  },
+  {
+    user_id: 3,
+    content: "SMH",
+    discussion_id: 4
   }
 ]
 
