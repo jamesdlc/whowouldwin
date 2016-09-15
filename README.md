@@ -1,22 +1,17 @@
 # Who Would Win?
 
-How to use it?
+DEMO: https://realwhowouldwin.herokuapp.com/
 
-Things you may want to cover:
+Who Would Win is an application that simulates a matchup between two sports teams.  The winner is determined via a simple algorithm.
 
-* Ruby version
+## Technologies Used
+- Ruby on Rails
+- Bootstrap
+- PostgreSQL
+- Sass
+- Heroku
 
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Planned features
+- Integrate Stattleship API (very soon)
+- Add more Sports
+- Determine winner with a more scientific algorithm
