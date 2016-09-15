@@ -5,22 +5,22 @@ include AuthHelper
 before_action :logged_in?
 
   def set_first_team
-    @nflteams = NflTeam.all
+    @nbateams = NbaTeam.all
   end
 
   def set_second_team
-    @nflteam = NbaTeam.find_by_id(params[:nfl_team_id])
-    @nflteam2 = NbaTeam.find_by_id(params[:id])
-    @nflteams = NbaTeam.all
+    @nbateam = NbaTeam.find_by_id(params[:nba_team_id])
+    @nbateam2 = NbaTeam.find_by_id(params[:id])
+    @nbateams = NbaTeam.all
   end
 
   def result
-    @nflteam = NbaTeam.find_by_id(params[:nfl_team_id])
-    @nflteam2 = NbaTeam.find_by_id(params[:id])
-    @comparison = compare(@nflteam2, @nflteam)
-    if @nflteam.id == @nflteam2.id
-      flash[:notice] = "You can't pick the #{@nflteam.name} twice."
-      redirect_to root_path
+    @nbateam = NbaTeam.find_by_id(params[:nba_team_id])
+    @nbateam2 = NbaTeam.find_by_id(params[:id])
+    @comparison = compare(@nbateam2, @nbateam)
+    if @nbateam.id == @nbateam2.id
+      flash[:notice] = "You can't pick the #{@nbateam.name} twice."
+      redirect_to set_second_team_path
     end
   end
 
@@ -34,5 +34,6 @@ before_action :logged_in?
         return team2.name + " win. " + team1.name  + " lose. " + "Point differential:  #{ team2.mean_score_of_last_five -  team1.mean_score_of_last_five }"
       end
     end
+
 
 end

@@ -31,12 +31,13 @@
           <ul class="nav navbar-nav">
             <li><%= link_to "Home", root_path, method: :get, :class => ""  %></li>
             <li><%= link_to "Smack Talk", discussions_path, :class => "" %></li>
-            <li><%= link_to "Simulation", set_first_team_path, method: :get, :class => "" %></li>
+            <li><%= link_to "NBA", set_first_team_path, method: :get, :class => "" %></li>
+            <li><%= link_to "NFL", set_first_nfl_team_path, method: :get, :class => "" %></li>
             <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Simulation<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
+              <li><%= link_to "NBA", set_first_team_path, method: :get, :class => "" %></li>
+              <li><%= link_to "NFL", set_first_nfl_team_path, method: :get, :class => "" %></li>
               <li><a href="#">Something else here</a></li>
               <li role="separator" class="divider"></li>
               <li class="dropdown-header">Nav header</li>

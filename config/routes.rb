@@ -25,12 +25,12 @@ get '/discussions/:discussion_id/comments/:id/edit', to: "comments#edit", as: "e
 patch '/discussions/:discussion_id/comments/:id', to: "comments#update", as: "update_comment"
 delete '/discussions/:discussion_id/comments/:id', to: "comments#destroy", as: "delete_comment"
 
-get '/simulation', to: "nba_teams#set_first_team", as: "set_first_team"
+get '/simulation/nba', to: "nba_teams#set_first_team", as: "set_first_team"
 get '/simulation/nba/:nba_team_id/vs', to: "nba_teams#set_second_team", as: "set_second_team"
 get '/simulation/nba/:nba_team_id/vs/:id', to: "nba_teams#result", as: "result"
 
-get '/simulation', to: "nba_teams#set_first_team", as: "set_first_nfl_team"
-get '/simulation/nfl/:nfl_team_id/vs', to: "nfl_teams#set_second_team", as: "set_second_nfl_team"
-get '/simulation/nfl/:nfl_team_id/vs/:id', to: "nfl_teams#result", as: "nfl_esult"
+get '/simulation/nfl', to: "nfl_teams#set_first_nfl_team", as: "set_first_nfl_team"
+get '/simulation/nfl/:nfl_team_id/vs', to: "nfl_teams#set_second_nfl_team", as: "set_second_nfl_team"
+get '/simulation/nfl/:nfl_team_id/vs/:id', to: "nfl_teams#nfl_result", as: "nfl_result"
 
 end
