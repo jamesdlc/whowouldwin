@@ -1,6 +1,9 @@
 class NbaTeamsController < ApplicationController
 
 include NbaTeamsHelper
+include AuthHelper
+
+before_action :logged_in?
 
   def set_first_team
     @nbateams = NbaTeam.all

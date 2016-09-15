@@ -25,8 +25,8 @@ class CommentsController < ApplicationController
       flash[:notice] = "Congratulations! Your comment was successfully posted."
       redirect_to discussion_path(@discussion)
     else
-      flash[:notice] = "Please enter your comment."
-      redirect_to discussion_comments_path
+      flash[:error] = @comment.errors.full_messages.join(", ")
+      redirect_to discussion_path(@discussion)
     end
   end
 

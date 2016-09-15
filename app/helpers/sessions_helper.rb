@@ -12,6 +12,7 @@ module SessionsHelper
   def logged_in?
     if current_user == nil
       redirect_to login_path
+      flash[:notice] = "You need to be logged in to do that."
     end
   end
 

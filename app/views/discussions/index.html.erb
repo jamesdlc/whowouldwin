@@ -1,15 +1,13 @@
 
 <div class="row">
-  <%= link_to "Post a new Discussion", new_discussion_path, method: :get, :class => "btn btn-primary col-md-6 col-md-offset-3" %>
+  <%= link_to "Post a Smack Talk Topic", new_discussion_path, method: :get, :class => "btn btn-primary col-md-6 col-md-offset-3" %>
 </div>
 <p>
 <div class="panel-group" id="accordion_recent_topics">
   <div class="panel panel-default">
-    <a  class="panel-default" data-toggle="collapse" data-parent="#accordion_recent_topics" href="#recent_topics">
-      <div class="panel-heading">
-        <i class="fa fa-hand-paper-o"></i> <strong> SMACK TALK </strong><i class="fa fa-bullhorn"> </i>
+      <div class="panel-heading text-center">
+        <i class="fa fa-hand-paper-o"></i><i class="fa fa-bullhorn"></i> <strong>SMACK TALK</strong>
       </div>
-    </a>
     <div id="recent_topics" class="panel-collapse collapse in">
       <table class="table table-hover table-striped">
         <thead>
@@ -21,7 +19,7 @@
         	</tr>
         </thead>
         <tbody>
-          <% @discussions.each do |b| %>
+          <% @discussions.order('created_at DESC').each do |b| %>
             <tr>
               <td class="col-md-5">
                 <strong><%= link_to "#{b.title}", discussion_path(b), method: :get %></strong>

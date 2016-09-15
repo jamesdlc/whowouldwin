@@ -24,7 +24,8 @@ class DiscussionsController < ApplicationController
     if @discussion.save
       redirect_to discussions_path
     else
-      redirect_to new_discussion_path
+        flash[:error] = @discussion.errors.full_messages.join(", ")
+        redirect_to new_discussion_path
     end
   end
 

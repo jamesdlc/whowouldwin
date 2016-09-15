@@ -30,7 +30,8 @@ class UsersController < ApplicationController
       login(@user)
       redirect_to root_path
     else
-      flash[:notice] = "Try again."
+      flash[:error] = @user.errors.full_messages.join(", ")
+      redirect_to signup_path
     end
   end
 

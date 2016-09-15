@@ -33,6 +33,10 @@ gem 'font-awesome-sass'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#ransack
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
+
 group :production do
   gem 'rails_12factor'
 end
