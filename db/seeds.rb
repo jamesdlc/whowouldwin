@@ -32,6 +32,16 @@ DISCUSSIONS = [
     user_id: 1,
     title: "Test",
     content: "Hello World"
+  },
+  {
+    user_id: 3,
+    title: "Predictions are way off!",
+    content: "This is BLASPHEMY.  Who made this?"
+  },
+  {
+    user_id: 2,
+    title: "What am I doing here?",
+    content: "The world is yours!"
   }
 ]
 
