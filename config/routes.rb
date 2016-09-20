@@ -33,5 +33,7 @@ get '/simulation/nfl', to: "nfl_teams#set_first_nfl_team", as: "set_first_nfl_te
 get '/simulation/nfl/:nfl_team_id/vs', to: "nfl_teams#set_second_nfl_team", as: "set_second_nfl_team"
 get '/simulation/nfl/:nfl_team_id/vs/:id', to: "nfl_teams#nfl_result", as: "nfl_result"
 
+get '/about', to: "about#index", as: "about"
+
 get "*unmatched_route", to: "application#not_found"
 end
